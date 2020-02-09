@@ -1,0 +1,10 @@
+---
+# Template configuration files for snap
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ snap_templates_copy }}"
+  when: snap_copy_templates

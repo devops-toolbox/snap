@@ -1,0 +1,27 @@
+---
+# Install snap packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ snap_packages_remove }}"
+    state: absent
+  become: true
+  when: snap_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ snap_packages_repos }}"
+    state: "{{ snap_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ snap_packages_prereq }}"
+    state: "{{ snap_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ snap_packages_install }}"
+    state: "{{ snap_packages_state }}"
+  become: true
