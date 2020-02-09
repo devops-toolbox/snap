@@ -8,10 +8,10 @@ snap: Snap
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.snap](https://galaxy.ansible.com/devops-toolbox.snap)
+[https://galaxy.ansible.com/devopstoolbox.snap](https://galaxy.ansible.com/devopstoolbox.snap)
 
 ```bash
-ansible-galaxy install devops-toolbox.snap
+ansible-galaxy install devopstoolbox.snap
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: snap is configured
       import_role:
-        name: devops-toolbox.snap
+        name: devopstoolbox.snap
       vars:
         snap_packages_state: present
         snap_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
